@@ -1,6 +1,11 @@
+import { useState } from "react";
 import Link from "../Link/Link";
+import { BsMenuButtonWideFill, } from 'react-icons/bs';
+import { AiFillCloseCircle } from 'react-icons/ai';
+
 
 const NavBar = () => {
+    const[open,setOpen] =useState(false)
 
 
     const routes = [
@@ -17,6 +22,14 @@ const NavBar = () => {
 
         
         <nav>
+           <div  className=" md:hidden text-3xl" onClick={() => setOpen(!open)}>
+            {
+                open === true ?
+                 <AiFillCloseCircle></AiFillCloseCircle>
+                 : <BsMenuButtonWideFill></BsMenuButtonWideFill>
+            }
+           
+           </div>
             <ul className=" md:flex  ">
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link> )

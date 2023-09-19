@@ -1,5 +1,5 @@
 import './App.css'
-import Link from './component/Link/Link';
+// import Link from './component/Link/Link';
 import Nav from './component/Nav/Nav';
 import NavBar from './component/NavBar/NavBar';
 
@@ -10,7 +10,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <Nav></Nav>
-      <Link></Link>
+      {/* <Link></Link> */}
       <h1 className=' text-2xl ' >Vite + React</h1>
 
     </>
